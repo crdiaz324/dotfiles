@@ -1,0 +1,7 @@
+
+https://github.com/anishathalye/dotbot#defaults
+
+https://github.com/anishathalye/dotbot/wiki
+
+https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot
+

@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- create:
+    - ~/.config/alacritty
+    - ~/.config/fish
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.config/starship.toml: starship.toml
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.config/fish/config.fish: config.fish
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+

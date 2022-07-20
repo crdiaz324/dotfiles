@@ -1,0 +1,157 @@
+# yamllint disable rule:braces rule:commas rule:colons rule:comments-indentation
+---
+window:
+  # Blank space added around the window in pixels
+  padding:
+    x: 5
+    y: 5
+
+  scrolling:
+    history: 10000
+    multiplier: 3 
+      
+  # Spread additional padding evenly around the terminal content
+  dynamic_padding: true
+
+  # Disable border and title bar
+  #decorations: transparent
+  decorations: none
+  
+font:
+  normal:
+    family: MesloLGS NF
+    style: Regular
+  bold:
+    family: MesloLGS NF
+    style: Bold
+  italic:
+    family: MesloLGS NF
+    style: Italic
+
+  # Point size of the font
+  size: 16
+draw_bold_text_with_bright_colors: true
+
+
+# Color Schemes from:  https://github.com/eendroroy/alacritty-theme
+
+# Tomorrow Night Bright color scheme
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xeaeaea'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xd54e53'
+    green:   '0xb9ca4a'
+    yellow:  '0xe6c547'
+    blue:    '0x7aa6da'
+    magenta: '0xc397d8'
+    cyan:    '0x70c0ba'
+    white:   '0x424242'
+
+  # Bright colors
+  bright:
+    black:   '0x666666'
+    red:     '0xff3334'
+    green:   '0x9ec400'
+    yellow:  '0xe7c547'
+    blue:    '0x7aa6da'
+    magenta: '0xb77ee0'
+    cyan:    '0x54ced6'
+    white:   '0x2a2a2a'
+
+# Cobalt2 Color Scheme
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x122637'
+#    foreground: '0xffffff'
+#
+#  # Colors the cursor will use if `custom_cursor_colors` is true
+#  cursor:
+#    text: '0x122637'
+#    cursor: '0xf0cb09'
+#
+#  # Normal colors
+#  normal:
+#    black:   '0x000000'
+#    red:     '0xff0000'
+#    green:   '0x37dd21'
+#    yellow:  '0xfee409'
+#    blue:    '0x1460d2'
+#    magenta: '0xff005d'
+#    cyan:    '0x00bbbb'
+#    white:   '0xbbbbbb'
+#
+#  # Bright colors
+#  bright:
+#    black:   '0x545454'
+#    red:     '0xf40d17'
+#    green:   '0x3bcf1d'
+#    yellow:  '0xecc809'
+#    blue:    '0x5555ff'
+#    magenta: '0xff55ff'
+#    cyan:    '0x6ae3f9'
+#    white:   '0xffffff'
+
+# One Dark Color scheme
+#colors:
+#  primary:
+#    background: '#24272e'
+#    foreground: '#abb2bf'
+#  cursor:
+#    text: '#0b0b0b'    # black
+#    cursor: '#528bff'
+#  vi_mode_cursor:
+#    text: '#abb2bf'
+#    cursor: '#333841'
+#  selection:
+#    text: '#abb2bf'
+#    background: '#3e4452'
+#  search:
+#    matches:
+#      foreground: '#3e4452'
+#      background: '#e5c07b'
+#    bar:
+#      background: '#282c34'
+#      foreground: '#abb2bf'
+#  normal:
+#    black:   '#24272e'
+#    red:     '#e06c75'
+#    green:   '#98c379'
+#    yellow:  '#e5c07b'
+#    blue:    '#61afef'
+#    magenta: '#c678dd'
+#    cyan:    '#56b6c2'
+#    white:   '#abb2bf'
+#  bright:
+#    black:   '#3e4452'
+#    red:     '#be5046'
+#    green:   '#98c379'
+#    yellow:  '#d19a66'
+#    blue:    '#61afef'
+#    magenta: '#c678dd'
+#    cyan:    '#56b6c2'
+#    white:   '#5c6370'
+
+mouse:
+  hide_when_typing: true
+
+selection:
+  # When set to `true`, selected text will be copied to the primary
+  # clipboard.
+  save_to_clipboard: true
+
+cursor:
+  # Thickness of the cursor (number from `0.0` to `1.0`)
+  thickness: 0.18
+  # Vi mode cursor style
+  vi_mode_style: Block
+
+key_bindings:
+  - { key: L, mods: Control, action: ClearLogNotice }
+  - { key: N, mods: Command, action: CreateNewWindow }
