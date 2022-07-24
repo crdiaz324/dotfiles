@@ -1,11 +1,15 @@
+---
+# Sets default config for certain directives
 - defaults:
-    brewfile:
-      stdout: false
-      stderr: false
-      include: ['tap', 'brew', 'cask', 'mas']
     link:
       relink: true
       force: true
+
+    brewfile:
+      stdout: true
+    brew:
+      stderr: false
+      stdout: false
 
 - clean: ['~']
 
@@ -18,10 +22,14 @@
     ~/.config/starship.toml: starship.toml
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.config/fish/config.fish: config.fish
+    ~/.config/nvim/init.vim: init.vim
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
 
+# Installs brew if missing
+- install-brew: true
+
+# Reads brewfile for packages to install
 - brewfile:
-    file: Brewfile
-
+    - Brewfile
