@@ -1,5 +1,12 @@
 # yamllint disable rule:braces rule:commas rule:colons rule:comments-indentation
 ---
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
 window:
   # Blank space added around the window in pixels
   padding:
@@ -15,7 +22,8 @@ window:
 
   # Disable border and title bar
   #decorations: transparent
-  decorations: none
+  #decorations: none
+  decorations: full
   
 font:
   normal:
