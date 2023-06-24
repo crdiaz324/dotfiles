@@ -74,6 +74,3 @@ export KUBECONFIG=~/.kube/config
 gpip(){
   PIP_REQUIRE_VIRTUALENV="0" pip3 "$@"
 }
-
-
-export HOMEBREW_GITHUB_API_TOKEN=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
